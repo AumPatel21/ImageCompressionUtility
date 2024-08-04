@@ -11,8 +11,8 @@ class RunLengthEncoding
 public:
     // RLEcompressor();
     // ~RLEcompressor();
-    std::vector<uint8_t> compress(const std::vector<uint8_t> &input);
-    std::vector<uint8_t> decompress(const std::vector<uint8_t> &input);
+    const std::vector<std::pair<uint8_t, int>> compress(const std::vector<uint8_t> &input);
+    std::vector<uint8_t> decompress(const std::vector<std::pair<uint8_t, int>> &compressedData);
 };
 
 #endif
